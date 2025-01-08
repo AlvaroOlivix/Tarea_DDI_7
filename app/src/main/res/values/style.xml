@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Icon_style" parent="Theme.DDI_Tarea7">
+        <item name="cornerRadius">4dp</item>
+        <item name="strokeColor">@color/md_theme_primary</item>
+        <item name="backgroundTint">@color/md_theme_inverseOnSurface</item>
+        <item name="textFillColor">@color/md_theme_primary</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+    <style name="Icon_style_" parent="Theme.DDI_Tarea7">
+        <item name="cornerRadius">4dp</item>
+        <item name="backgroundTint">@color/md_theme_primary</item>
+    </style>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DDI_Tarea7</string>
+
+    <string name="zapatillas_title">Zapatillas El Ganso Verdes Talla 43 Nuevas!!</string>
+    <string name="protection_text">68,95 € Protección al comprador incluidas</string>
+    <string name="description_text">Zapatillas casual de la marca El Ganso en color verde disponibles en la talla 43.Se</string>
+    <string name="armario_title">Distintivo Armario estrella</string>
+    <string name="armario_text">Concedido a vendedores que suben artículos con frecuencia.</string>
+    <string name="tasa_title">Distintivo Armario estrella</string>
+    <string name="tasa_text">Nuestra protección al comprador implica una tasa que se añade a las compras realizadas a través del botón "Comprar".Esta protección incluye la política de reembolso.</string>
+
+</resources>
