@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <color name="blue">#03A9F4</color>
+    <color name="orange_light">#FFC7B6</color>
+    <color name="orange">#FF5722</color>
+    <color name="grey">#F6E1E1</color>
     <color name="md_theme_primary">#8D4E2C</color>
     <color name="md_theme_onPrimary">#FFFFFF</color>
     <color name="md_theme_primaryContainer">#FFDBCB</color>
@@ -11,7 +15,7 @@
     <color name="md_theme_onSecondaryContainer">#2C160B</color>
     <color name="md_theme_tertiary">#655F31</color>
     <color name="md_theme_onTertiary">#FFFFFF</color>
-    <color name="md_theme_tertiaryContainer">#ECE4AA</color>
+    <color name="md_theme_tertiaryContainer">#F4F0CF</color>
     <color name="md_theme_onTertiaryContainer">#1F1C00</color>
     <color name="md_theme_error">#BA1A1A</color>
     <color name="md_theme_onError">#FFFFFF</color>
@@ -62,7 +66,7 @@
     <color name="md_theme_onTertiaryContainer_mediumContrast">#FFFFFF</color>
     <color name="md_theme_error_mediumContrast">#8C0009</color>
     <color name="md_theme_onError_mediumContrast">#FFFFFF</color>
-    <color name="md_theme_errorContainer_mediumContrast">#DA342E</color>
+    <color name="md_theme_errorContainer_mediumContrast">#DB5853</color>
     <color name="md_theme_onErrorContainer_mediumContrast">#FFFFFF</color>
     <color name="md_theme_background_mediumContrast">#FFF8F6</color>
     <color name="md_theme_onBackground_mediumContrast">#221A16</color>

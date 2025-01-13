@@ -17,6 +17,13 @@
     <style name="icon_style_3" parent="Base.Theme.DDI_Tarea7">
         <item name="backgroundTint">@color/md_theme_outlineVariant_mediumContrast</item>
     </style>
+    
+    <style name="link" parent="Base.Theme.DDI_Tarea7">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+    </style>
 
 
 </resources>

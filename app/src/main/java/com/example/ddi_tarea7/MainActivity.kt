@@ -1,6 +1,9 @@
 package com.example.ddi_tarea7
 
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.style.UnderlineSpan
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.PagerSnapHelper
@@ -9,6 +12,7 @@ import com.example.ddi_tarea7.data.local.LocalImages
 import com.example.ddi_tarea7.databinding.ActivityMainBinding
 import com.google.android.material.carousel.CarouselLayoutManager
 import com.google.android.material.carousel.FullScreenCarouselStrategy
+import com.google.android.material.textview.MaterialTextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         snapHelper.attachToRecyclerView(recyclerView)
         recyclerView.setHasFixedSize(true)
         recyclerView.isNestedScrollingEnabled = false
+
+
 
 
 

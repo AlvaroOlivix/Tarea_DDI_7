@@ -1,5 +1,7 @@
 package com.example.ddi_tarea7
 
+import android.text.SpannableString
+import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
