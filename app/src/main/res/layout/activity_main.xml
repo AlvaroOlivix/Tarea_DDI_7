@@ -43,6 +43,16 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:listitem="@layout/item_carousel" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:drawableLeft="@drawable/baseline_dry_cleaning_24"
+                app:layout_constraintEnd_toEndOf="@id/recycler"
+                app:layout_constraintBottom_toBottomOf="@id/recycler"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
@@ -97,7 +107,7 @@
                 app:layout_constraintTop_toTopOf="@id/rating_bar" />
 
             <Button
-                android:id="@+id/botonFrecuente"
+                android:id="@+id/buttonFrecuent"
                 style="@style/icon_style_3"
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
@@ -110,7 +120,7 @@
                 app:layout_constraintTop_toBottomOf="@id/rating_bar" />
 
             <Button
-                android:id="@+id/botonEnviar"
+                android:id="@+id/buttonSend"
                 style="@style/icon_style"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -127,7 +137,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 app:dividerColor="@color/grey"
-                app:layout_constraintTop_toBottomOf="@+id/botonFrecuente" />
+                app:layout_constraintTop_toBottomOf="@+id/buttonFrecuent" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/zapas_title"
@@ -320,12 +330,12 @@
             android:layout_margin="8dp"
             android:text="Hacer una oferta"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/buttonShare"
+            app:layout_constraintEnd_toStartOf="@id/buttonBuy"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/buttonShare"
+            android:id="@+id/buttonBuy"
             style="@style/Icon_style_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
