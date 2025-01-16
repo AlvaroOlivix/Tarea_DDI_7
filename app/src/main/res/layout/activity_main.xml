@@ -44,15 +44,17 @@
                 tools:listitem="@layout/item_carousel" />
 
             <Button
+                android:id="@+id/favorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="22"
-                android:layout_margin="4dp"
+                android:layout_margin="16dp"
                 android:backgroundTint="@color/white"
-                android:textColor="@color/black"
-                android:drawableLeft="@drawable/baseline_dry_cleaning_24"
-                app:layout_constraintEnd_toEndOf="@id/recycler"
-                app:layout_constraintBottom_toBottomOf="@id/recycler"/>
+                android:drawableLeft="@drawable/baseline_favorite_border_24"
+                android:text="@string/favoritos"
+                android:textColor="@color/md_theme_scrim"
+                app:layout_constraintBottom_toBottomOf="@+id/recycler"
+                app:layout_constraintEnd_toEndOf="@+id/recycler" />
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
@@ -144,7 +146,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-
                 android:text="@string/zapatillas_title"
                 android:textSize="@dimen/zapas_title_size"
                 android:textStyle="bold"
@@ -213,6 +214,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                style="@style/descripcion_Text"
                 android:text="Descripción"
                 android:textColor="@color/md_theme_outline"
                 app:layout_constraintStart_toStartOf="@id/zapas_title"
@@ -273,17 +275,19 @@
                 android:id="@+id/distintivo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
+                android:textSize="@dimen/zapas_title_size"
                 android:textStyle="bold"
                 android:layout_marginStart="@dimen/margin_low"
-                android:text="Distintivo Amarillo estrella"
+                android:text="@string/distintivo"
                 app:layout_constraintLeft_toRightOf="@id/card2"
                 app:layout_constraintTop_toTopOf="@id/card2"/>
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/distintivo_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
+                style="@style/descripcion_Text"
+                android:text="@string/distintivo_text"
                 app:layout_constraintTop_toBottomOf="@id/distintivo"
                 app:layout_constraintStart_toStartOf="@id/distintivo"/>
 
@@ -297,18 +301,36 @@
                 app:cardCornerRadius="50dp"
                 app:cardElevation="0dp"
                 app:layout_constraintStart_toStartOf="@id/card2"
-                app:layout_constraintTop_toBottomOf="@id/card2">
+                app:layout_constraintTop_toBottomOf="@id/distintivo_text">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/margin_extra_low"
                     android:src="@drawable/baseline_dry_cleaning_24"
-                    app:layout_constraintStart_toStartOf="@id/zapas_title"
-                    app:layout_constraintTop_toBottomOf="@id/divider3"
                     app:tint="@color/orange" />
 
             </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/zapas_title_size"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/margin_low"
+                android:text="@string/tasa"
+                app:layout_constraintLeft_toRightOf="@id/card3"
+                app:layout_constraintTop_toTopOf="@id/card3"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tasa_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/descripcion_Text"
+                android:layout_marginStart="@dimen/margin_low"
+                android:text="@string/tasa_text"
+                app:layout_constraintLeft_toRightOf="@id/card3"
+                app:layout_constraintTop_toBottomOf="@id/tasa"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

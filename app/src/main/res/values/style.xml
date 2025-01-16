@@ -25,5 +25,10 @@
         <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
     </style>
 
+    <style name="descripcion_Text" parent="Base.Theme.DDI_Tarea7">
+        <item name="android:textColor">@color/md_theme_outlineVariant_mediumContrast</item>
+        <item name="android:textSize">@dimen/text_size_XMid</item>
+    </style>
+
 
 </resources>
