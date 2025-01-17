@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="zapas_title_size">20sp</dimen>
-    <dimen name="text_size_XMid">18dp</dimen>
-    <dimen name="text_size_Mid">16dp</dimen>
+    <dimen name="text_size_XMid">18sp</dimen>
+    <dimen name="text_size_Mid">16sp</dimen>
+    <dimen name="text_size_XSmall">10sp</dimen>
     <dimen name="margin_mid">16dp</dimen>
     <dimen name="margin_low">8dp</dimen>
+    <dimen name="image_Size">500dp</dimen>
     <dimen name="margin_extra_low">4dp</dimen>
+    <dimen name="divider_height">35dp</dimen>
+    <dimen name="profile_dimen">50dp</dimen>
 </resources>

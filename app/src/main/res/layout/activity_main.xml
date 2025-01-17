@@ -5,25 +5,27 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="15dp"
-    android:layout_marginBottom="15dp"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="?attr/actionBarSize"
             app:menu="@menu/toolbar_menu"
+            app:title="@string/zapatillas_title"
             app:navigationIcon="@drawable/baseline_arrow_back_24" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"
@@ -36,8 +38,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
-                android:layout_margin="8dp"
+                android:layout_height="@dimen/image_Size"
+                android:layout_margin="@dimen/margin_low"
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 app:layout_constraintTop_toTopOf="parent"
@@ -47,32 +49,31 @@
                 android:id="@+id/favorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:backgroundTint="@color/white"
-                android:drawableLeft="@drawable/baseline_favorite_border_24"
+                style="@style/button_fav"
                 android:text="@string/favoritos"
-                android:textColor="@color/md_theme_scrim"
                 app:layout_constraintBottom_toBottomOf="@+id/recycler"
                 app:layout_constraintEnd_toEndOf="@+id/recycler" />
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="@dimen/image_Size"
+                android:contentDescription="@string/zapatillas_title"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@tools:sample/avatars" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/imageProfile"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="16dp"
-                app:cardCornerRadius="50dp"
+                android:layout_width="@dimen/profile_dimen"
+                android:layout_height="@dimen/profile_dimen"
+                android:layout_margin="@dimen/margin_mid"
+                app:cardCornerRadius="@dimen/profile_dimen"
                 app:layout_constraintStart_toStartOf="@id/recycler"
                 app:layout_constraintTop_toBottomOf="@id/recycler">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="TODO"
                     android:scaleType="centerCrop"
                     android:src="@drawable/image12" />
             </androidx.cardview.widget.CardView>
@@ -82,8 +83,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="olivix_destiny"
-                android:textSize="18sp"
+                android:text="@string/nombre_perfil"
+                android:textSize="@dimen/text_size_XMid"
                 app:layout_constraintLeft_toRightOf="@id/imageProfile"
                 app:layout_constraintTop_toTopOf="@id/imageProfile" />
 
@@ -103,7 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="(210)"
+                android:text="@string/comentarios"
                 app:layout_constraintBottom_toBottomOf="@id/rating_bar"
                 app:layout_constraintLeft_toRightOf="@id/rating_bar"
                 app:layout_constraintTop_toTopOf="@id/rating_bar" />
@@ -114,9 +115,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
                 android:elevation="0dp"
-                android:text="Anuncios frecuentes"
+                android:text="@string/anuncios"
                 android:textAlignment="textEnd"
-                android:textSize="10sp"
+                android:textSize="@dimen/text_size_XSmall"
                 app:icon="@drawable/baseline_dry_cleaning_24"
                 app:layout_constraintStart_toStartOf="@id/rating_bar"
                 app:layout_constraintTop_toBottomOf="@id/rating_bar" />
@@ -126,7 +127,7 @@
                 style="@style/icon_style"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/margin_low"
                 android:text="Enviar ..."
                 app:layout_constraintBottom_toBottomOf="@id/rating_bar"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -135,17 +136,14 @@
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                app:dividerColor="@color/grey"
+                style="@style/divider"
                 app:layout_constraintTop_toBottomOf="@+id/buttonFrecuent" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/zapas_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/text_size_Mid"
                 android:text="@string/zapatillas_title"
                 android:textSize="@dimen/zapas_title_size"
                 android:textStyle="bold"
@@ -156,7 +154,7 @@
                 android:id="@+id/tag_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/margin_mid"
                 android:clickable="true"
                 android:text="45 (10.5) . Nuevo con Etiquetas . "
                 app:layout_constraintStart_toStartOf="@id/zapas_title"
@@ -175,8 +173,8 @@
                 android:id="@+id/tag_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="75,95 €"
+                android:layout_marginTop="@dimen/margin_low"
+                android:text="@string/price"
                 app:layout_constraintStart_toStartOf="@id/zapas_title"
                 app:layout_constraintTop_toBottomOf="@id/tag_description" />
 
@@ -186,7 +184,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/protection_text"
                 android:textColor="@color/md_theme_errorContainer_mediumContrast"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_size_Mid"
+                android:layout_marginTop="@dimen/margin_low"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/zapas_title"
                 app:layout_constraintTop_toBottomOf="@+id/tag_price" />
@@ -203,9 +202,7 @@
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider2"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="16dp"
-                app:dividerColor="@color/grey"
+                style="@style/divider"
                 app:layout_constraintStart_toStartOf="@id/divider"
                 app:layout_constraintTop_toBottomOf="@+id/protection" />
 
@@ -213,10 +210,9 @@
                 android:id="@+id/title_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/margin_mid"
                 style="@style/descripcion_Text"
-                android:text="Descripción"
-                android:textColor="@color/md_theme_outline"
+                android:text="@string/description"
                 app:layout_constraintStart_toStartOf="@id/zapas_title"
                 app:layout_constraintTop_toBottomOf="@id/divider2" />
 
@@ -224,7 +220,7 @@
                 android:id="@+id/tag_description2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_mid"
                 android:text="@string/description_text"
                 android:textSize="@dimen/zapas_title_size"
                 app:layout_constraintStart_toStartOf="@id/zapas_title"
@@ -243,9 +239,7 @@
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider3"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="16dp"
-                app:dividerColor="@color/grey"
+                style="@style/divider"
                 app:layout_constraintStart_toStartOf="@id/divider"
                 app:layout_constraintTop_toBottomOf="@+id/mas" />
 
@@ -253,9 +247,7 @@
                 android:id="@+id/card2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_mid"
-                android:backgroundTint="@color/orange_light"
-                app:cardCornerRadius="50dp"
+                style="@style/cardViewVIew"
                 app:cardElevation="0dp"
                 app:layout_constraintStart_toStartOf="@id/zapas_title"
                 app:layout_constraintTop_toBottomOf="@id/divider3">
@@ -282,23 +274,22 @@
                 app:layout_constraintLeft_toRightOf="@id/card2"
                 app:layout_constraintTop_toTopOf="@id/card2"/>
 
+
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/distintivo_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 style="@style/descripcion_Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:text="@string/distintivo_text"
-                app:layout_constraintTop_toBottomOf="@id/distintivo"
-                app:layout_constraintStart_toStartOf="@id/distintivo"/>
-
+                app:layout_constraintEnd_toEndOf="@id/buttonSend"
+                app:layout_constraintStart_toStartOf="@id/distintivo"
+                app:layout_constraintTop_toBottomOf="@id/distintivo" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card3"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="@dimen/margin_mid"
-                android:backgroundTint="@color/orange_light"
-                app:cardCornerRadius="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/cardViewVIew"
                 app:cardElevation="0dp"
                 app:layout_constraintStart_toStartOf="@id/card2"
                 app:layout_constraintTop_toBottomOf="@id/distintivo_text">
@@ -324,13 +315,39 @@
                 app:layout_constraintTop_toTopOf="@id/card3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tasa_text"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 style="@style/descripcion_Text"
-                android:layout_marginStart="@dimen/margin_low"
                 android:text="@string/tasa_text"
-                app:layout_constraintLeft_toRightOf="@id/card3"
+                app:layout_constraintEnd_toEndOf="@id/buttonSend"
+                app:layout_constraintStart_toStartOf="@id/tasa"
                 app:layout_constraintTop_toBottomOf="@id/tasa"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                style="@style/divider"
+                app:layout_constraintStart_toStartOf="@id/divider"
+                app:layout_constraintTop_toBottomOf="@+id/tasa_text" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/descripcion_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_mid"
+                android:text="@string/Envio"
+                android:textColor="@color/md_theme_scrim"
+                app:layout_constraintStart_toStartOf="@id/card2"
+                app:layout_constraintTop_toBottomOf="@id/divider4" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/descripcion_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_mid"
+                android:text="Desde 0,00 €"
+                app:layout_constraintEnd_toEndOf="@id/buttonSend"
+                app:layout_constraintTop_toBottomOf="@id/divider4" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

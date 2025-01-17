@@ -1,15 +1,21 @@
 <resources>
     <string name="app_name">DDI_Tarea7</string>
 <string name="nike"><u>NIKE</u></string>
+    <string name="nombre_perfil">olivix_destiny</string>
     <string name="zapatillas_title">Zapatillas Lebron NXXT amd Talla 45 Limited Edition</string>
+    <string name="price">75,95 €</string>
     <string name="protection_text">80,95 € Protección al comprador incluidas</string>
     <string name="description_text">Zapatillas de Baloncesto de la marca Nike de la talla 45.0 o 10,5 Americano. </string>
     <string name="favoritos">34</string>
+    <string name="description">Descripción</string>
+    <string name="comentarios">(210)</string>
+    <string name="anuncios">Anuncios frecuentes</string>
     <string name="distintivo">Distintivo Amarillo estrella</string>
     <string name="distintivo_text">Concedido a vendedores que suben articulos con frecuencia</string>
     <string name="tasa">Tasa de protección al comprador</string>
     <string name="tasas_text">Nuestra protección al comprador implica una tasa que se añade a las compras realizadas a través del botón "Comprar".Esta protección incluye la política de reembolso.</string>
     <string name="mas"><u>Más</u></string>
+    <string name="Envio">Envio</string>
     <string name="armario_title">Distintivo Armario estrella</string>
     <string name="tasa_title">Distintivo Armario estrella</string>
     <string name="tasa_text">Nuestra protección al comprador implica una tasa que se añade a las compras realizadas a través del botón "Comprar".Esta protección incluye la política de reembolso.</string>
